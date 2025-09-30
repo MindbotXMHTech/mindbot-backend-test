@@ -15,4 +15,4 @@ app.post("/reservations", async (req, res) => {
   res.status(501).json({ error: "Not implemented" });
 });
 
-app.listen(3000, () => console.log("API running on http://localhost:3000"));
+export default app;
