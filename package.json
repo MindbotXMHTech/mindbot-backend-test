@@ -4,11 +4,11 @@
   "description": "คุณได้รับมอบหมายให้พัฒนาส่วนหนึ่งของ **Hotel Booking System**   ระบบนี้ต้องรองรับลูกค้าที่จองห้องแบบ real-time โดยไม่ให้เกิด **double booking**",
   "main": "api/index.js",
   "directories": {
-    "start": "node api/index.js",
-    "dev": "nodemon api/index.js",
     "test": "tests"
   },
   "scripts": {
+    "start": "node api/index.js",
+    "dev": "nodemon api/index.js",
     "test": "cross-env NODE_OPTIONS=--experimental-vm-modules jest --runInBand"
   },
   "repository": {

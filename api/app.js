@@ -1,6 +1,6 @@
 import express from "express";
 import bodyParser from "body-parser";
-import { pool } from "./db.js";
+import reservations from "./routes/reservations.js";
 
 const app = express();
 app.use(bodyParser.json());
@@ -11,8 +11,6 @@ app.get("/health", (req, res) => {
 });
 
 // TODO: implement POST /reservations
-app.post("/reservations", async (req, res) => {
-  res.status(501).json({ error: "Not implemented" });
-});
+app.post("/reservations", reservations);
 
 export default app;
