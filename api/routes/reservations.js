@@ -28,6 +28,9 @@ router.post("/", async (req, res) => {
         .status(409)
         .json({ error: "Room not available for given dates" });
     }
+    if (error.code === "23503") {
+      return res.status(400).json({ error: "Invalid room_id" });
+    }
     console.error(error);
     return res.status(500).json({ error: "internal error" });
   }

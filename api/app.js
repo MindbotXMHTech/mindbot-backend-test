@@ -1,9 +1,8 @@
 import express from "express";
-import bodyParser from "body-parser";
 import reservations from "./routes/reservations.js";
 
 const app = express();
-app.use(bodyParser.json());
+app.use(express.json());
 
 // Healthcheck
 app.get("/health", (req, res) => {
@@ -11,6 +10,6 @@ app.get("/health", (req, res) => {
 });
 
 // TODO: implement POST /reservations
-app.post("/reservations", reservations);
+app.use("/reservations", reservations);
 
 export default app;

@@ -9,10 +9,10 @@ CREATE TABLE rooms (
 
 CREATE TABLE reservations (
     id SERIAL PRIMARY KEY,
-    room_id INT REFERENCES rooms(id) ON DELETE CASCADE,
+    room_id INT NOT NULL REFERENCES rooms(id) ON DELETE CASCADE,
     check_in DATE NOT NULL,
     check_out DATE NOT NULL,
-    period DATERANG GENERATED ALWAYS AS (daterange(check_in, check_out, '[)')) STORED,
+    period DATERANGE GENERATED ALWAYS AS (daterange(check_in, check_out, '[)')) STORED,
     created_at TIMESTAMPTZ NOT NULL DEFAULT now(),
     CONSTRAINT check_dates CHECK (check_in < check_out)
 );
