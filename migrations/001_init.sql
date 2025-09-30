@@ -22,4 +22,10 @@ ALTER TABLE reservations
     EXCLUDE USING GIST (
         room_id WITH =,
         period WITH &&
-    )
+    );
+
+
+INSERT INTO rooms (id, name) VALUES
+    (101, 'Room 101'),
+    (102, 'Room 102'),
+    (103, 'Room 103');

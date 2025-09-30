@@ -16,8 +16,8 @@ test("can create a reservation", async () => {
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({
       room_id: 101,
-      check_in: "2025-10-01",
-      check_out: "2025-10-05",
+      check_in: "2025-11-01",
+      check_out: "2025-11-05",
     }),
   });
   assert.strictEqual(res.status, 201);
@@ -31,8 +31,8 @@ test("prevents double booking", async () => {
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({
       room_id: 101,
-      check_in: "2025-10-01",
-      check_out: "2025-10-05",
+      check_in: "2025-11-01",
+      check_out: "2025-11-05",
     }),
   });
   assert.strictEqual(res.status, 409);
