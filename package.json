@@ -1,0 +1,34 @@
+{
+  "name": "mindbot-backend-test",
+  "version": "1.0.0",
+  "description": "คุณได้รับมอบหมายให้พัฒนาส่วนหนึ่งของ **Hotel Booking System**   ระบบนี้ต้องรองรับลูกค้าที่จองห้องแบบ real-time โดยไม่ให้เกิด **double booking**",
+  "main": "api/index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "start": "node api/index.js",
+    "dev": "nodemon api/index.js",
+    "test": "node --test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kimhanz/mindbot-backend-test.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/kimhanz/mindbot-backend-test/issues"
+  },
+  "homepage": "https://github.com/kimhanz/mindbot-backend-test#readme",
+  "dependencies": {
+    "express": "^5.1.0",
+    "node-fetch": "^3.3.2",
+    "pg": "^8.16.3"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.10"
+  }
+}

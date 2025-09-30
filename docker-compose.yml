@@ -1,4 +1,4 @@
-version: '3.9'
+version: "3.9"
 services:
   db:
     image: postgres:15
@@ -7,12 +7,12 @@ services:
       POSTGRES_PASSWORD: postgres
       POSTGRES_DB: booking
     ports:
-      - "5432:5432"
+      - "5433:5432"
     volumes:
       - ./migrations:/docker-entrypoint-initdb.d
 
   api:
-    build: ./api
+    build: .
     volumes:
       - ./api:/usr/src/app
     ports:
